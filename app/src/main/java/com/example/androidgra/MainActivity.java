@@ -5,25 +5,26 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    private OpenGLView openGLView;
+    private OpenGLView glView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        glView = (OpenGLView) findViewById(R.id.openGLView);
 
-        openGLView = (OpenGLView) findViewById(R.id.openGLView);
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        openGLView.onResume();
+        glView.onResume();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        openGLView.onPause();
+        glView.onPause();
     }
 }
